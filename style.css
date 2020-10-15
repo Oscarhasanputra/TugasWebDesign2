@@ -1,0 +1,254 @@
+.nav-menu,
+.nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+header.fixed-top{
+    z-index: 10; 
+    background-color: white; 
+    box-shadow: 0px 1px 10px black;
+}
+.nav-menu ul {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  z-index: 99;
+}
+.section-header h2 {
+    font-size: 32px;
+    color: #0c2e8a;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 20px;
+  }
+  
+  .section-header h2::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #50d8af;
+    bottom: 0;
+    left: 0;
+  }
+.section{
+    margin-top: 20%;
+}
+.nav-menu li {
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-menu > li {
+  float: left;
+}
+
+.nav-menu li:hover > ul,
+
+.nav-menu a {
+    padding: 10px 3em;
+    text-decoration: none;
+    display: inline-block;
+    color: #555;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .nav-menu li:hover > a,
+  .nav-menu .menu-active > a {
+    color: #50d8af;
+  }
+  .title{
+    padding: 10px 8px;
+    text-decoration: none;
+    display: inline-block;
+    color: #555;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    outline: none;
+  }
+.burger{
+    width: 30px;
+    display:none;
+    margin-right: 5rem;
+    cursor: pointer;
+}
+.burger>div{
+    width: 100%;
+    height: 5px;
+    margin-top: 3px;
+    background-color: black;
+    transition: all 0.5s ease-in;
+}
+
+.nav-menu-responsive{
+    -webkit-transition: all 2s ease-in;
+-moz-transition: all 2s ease-in;
+-o-transition: all 2s ease-in;
+transition: all 2s ease-in;
+}
+@keyframes SlideMenu{
+    from{
+        right: -100%;
+    }
+    to{
+        right:0%;
+    }
+}
+@keyframes SlideMenuReverse{
+    from{
+        right: 0%;
+    }
+    to{
+        right:-100%;
+    }
+}
+@media only screen and (max-width:855px){
+    .burger{
+        display: inline-block;
+    }
+    /* ul.nav-menu{
+        display: none;
+    } */
+    header.fixed-top{
+        height: 13% !important;
+    }
+    .nav-menu{
+        display: none;
+    }
+    .nav-menu-responsive{
+        position: absolute;
+        top: 0px;
+        right: -100%;
+    }
+    #checkShow2[type=checkbox]:checked + header{
+        height: 100%;
+    }
+    #checkShow2[type=checkbox]:checked + header>nav>ul.nav-menu-responsive{
+        display: flex;
+        animation-name: SlideMenu;
+        animation-duration: 0.5s;
+        position: fixed;
+        top: 0px;
+        right: 0%;
+        width: 40%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #b5b4b1;
+    }
+    #checkShow[type=checkbox]:checked + div>div:first-child{
+        transform: rotate(45deg) translate(5px,5px);
+        background-color: white;
+    }
+    #checkShow[type=checkbox]:checked + div>div:last-child{
+        transform: rotate(-45deg) translate(6px,-6px);
+        background-color: white;
+    }
+    #checkShow[type=checkbox]:checked + div>div:nth-child(2){
+        opacity: 0;
+    }
+    #nav-menu-container ul li{
+        opacity: 0;
+        right: -20%;
+    }
+    .box-blended{
+    top:-10em !important;
+    }
+}
+
+#checkShow{
+    display: none;
+}
+#checkShow2{
+    display:none;
+}
+
+/* #nav-menu-container ul li{
+} */
+.image-background{
+    background-image: url(bg.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 90vh !important;
+    width: 100%;
+    background-position: center;
+}
+.box-blended{
+    position: relative;
+    left: 20%;
+    top:-15em;
+    border-radius: 30px;
+    padding: 2% 4%;
+}
+.profil{
+    border-radius: 50%;
+    width: 50%;
+    height: auto;
+    margin:0px auto;
+}
+.textStyle{
+    font-family: Tahoma, Geneva, sans-serif;
+font-size: 35px;
+letter-spacing: 0px;
+word-spacing: 2px;
+color: #000000;
+font-weight: 700;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+}
+.quote-sign-left {
+    margin-top: -15px;
+    padding-right: 10px;
+    display: inline-block;
+    width: 37px;
+  }
+  
+.quote-sign-right {
+    margin-bottom: -15px;
+    padding-left: 10px;
+    display: inline-block;
+    max-width: 100%;
+    width: 37px;
+  }
+@keyframes FadeUp{
+    from{
+        top:20%;
+        opacity: 0;
+    }
+    to{
+        top: 0%;
+        opacity: 1;
+    }
+}
+.profilCard{
+    position: relative;
+    margin-top: 10% !important;
+    margin-bottom: 10% !important;
+}
+.animationFadeUp{
+    animation-name: FadeUp;
+    animation-duration: 1s;
+}
+.textStyleQuote{
+    text-align: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+font-size: 39px;
+letter-spacing: 0px;
+word-spacing: 0px;
+color: #000000;
+font-weight: 400;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: italic;
+font-variant: normal;
+text-transform: none;
+}

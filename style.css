@@ -259,11 +259,18 @@ font-style: italic;
 font-variant: normal;
 text-transform: none;
 }
+<<<<<<< HEAD
 .footer{
 	position:fixed;
 	right:0;
 	left:0;
 	bottom:0;
+=======
+
+.footer{
+    position: relative;
+    bottom:0;
+>>>>>>> 80aaa77a5ee508d3ba6c08a36dee612f04422735
 	width:100%;
 	padding:1rem;
 	background-color: #333;

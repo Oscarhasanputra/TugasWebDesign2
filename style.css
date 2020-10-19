@@ -1,3 +1,4 @@
+
 .nav-menu,
 .nav-menu * {
   margin: 0;
@@ -88,6 +89,9 @@ header.fixed-top{
     transition: all 0.5s ease-in;
 }
 
+
+
+
 .nav-menu-responsive{
     -webkit-transition: all 2s ease-in;
 -moz-transition: all 2s ease-in;
@@ -162,6 +166,7 @@ transition: all 2s ease-in;
     .box-blended{
     top:-10em !important;
     }
+	
 }
 
 #checkShow{
@@ -194,6 +199,7 @@ transition: all 2s ease-in;
     height: auto;
     margin:0px auto;
 }
+
 .textStyle{
     font-family: Tahoma, Geneva, sans-serif;
 font-size: 35px;
@@ -235,6 +241,7 @@ text-transform: none;
     margin-top: 10% !important;
     margin-bottom: 10% !important;
 }
+
 .animationFadeUp{
     animation-name: FadeUp;
     animation-duration: 1s;
@@ -252,3 +259,15 @@ font-style: italic;
 font-variant: normal;
 text-transform: none;
 }
+
+.footer{
+    position: relative;
+    bottom:0;
+	width:100%;
+	padding:1rem;
+	background-color: #333;
+	color:#fff;
+	text-align:center;
+	
+}
+

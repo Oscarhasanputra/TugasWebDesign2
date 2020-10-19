@@ -228,11 +228,11 @@ text-transform: none;
   }
 @keyframes FadeUp{
     from{
-        top:20%;
+        transform: translateY(80%);
         opacity: 0;
     }
     to{
-        top: 0%;
+        transform: translateY(0%);
         opacity: 1;
     }
 }
